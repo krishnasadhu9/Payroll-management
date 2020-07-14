@@ -1,0 +1,53 @@
+{% load static %}
+
+<nav class="nav">
+  <div class="container">
+
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="/home" class="nav__link"><B>Home</a>
+      </li>
+
+      <li class="nav__item nav__item--login">
+        {% if user.is_authenticated %}
+        <li class="nav__item">
+          <a href="/details/{{user.username}}" class="nav__link"><B>My Profile</a>
+        </li>
+        <li class="nav__item">
+          <a href="/salaryselect/{{user.username}}" class="nav__link"><B>Pay-Slip</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="/timesheet/{{user.username}}" class="nav__link"><B>TimeSheet</a>
+        </li>
+        <li class="nav__item">
+          <a href="/logselect/{{user.username}}" class="nav__link"><B>Monthly Statements</a>
+
+        <li class="nav__item">
+        <a href="/logout" class="nav__link">Logout</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="/contactus" class="nav__link"><B>Contact US</a>
+        </li>
+
+        {% else %}
+
+        <li class="nav__item">
+        <a href="/login" class="nav__link">Employee Login</a>
+
+        <li class="nav__item">
+        <a href="/admin/" class="nav__link">Admin</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="/contactus" class="nav__link"><B>Contact US</a>
+        </li>
+
+
+
+        {% endif %}
+
+    </ul>
+  </div>
+</nav>

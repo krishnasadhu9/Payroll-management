@@ -1,0 +1,78 @@
+{% extends 'Management/base.html' %}
+
+
+{% block content %}
+
+
+<html>
+<style>
+      table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 30%;
+      }
+
+      td, th {
+          border: 0.6px solid #dddddd;
+          text-align: left;
+          padding: 5px;
+      }
+
+      tr:nth-child(even) {
+          background-color: #dddddd;
+      }
+  </style>
+
+
+<div>
+        <br>
+        <p style="font-size: large" >
+                 Employee Details of {{ employee.username }}
+            </p>
+
+    <table>
+              <tbody>
+
+                  <tr>
+                      <td><b>First Name </b> </td>
+                      <td>{{ employee.firstName }}<br></td>
+                  </tr>
+                  <tr>
+                      <td><b>Last  Name   </b></td>
+                      <td> {{ employee.lastName }}<br></td>
+                    </tr>
+                    <tr>
+                      <td><b>Date of Birth   </b></td>
+                      <td> {{ employee.dob }}<br></td>
+                    </tr>
+                    <tr>
+                      <td><b>Contact number   </b></td>
+                      <td> {{ employee.contact}}<br></td>
+                    </tr>
+                    <tr>
+                      <td><b>Address   </b> </td>
+                      <td>{{ employee.address}}<br></td>
+                    </tr>
+                    <tr>
+                      <td><b>Email   </b></td>
+                      <td> {{ employee.email }}<br></td>
+                    </tr>
+                    <tr>
+                      <td><b>CTC salary    </b></td>
+                      <td> ${{ employee.CTC }} USD <br></td>
+                    </tr>
+                    <tr>
+                      <td><b>Department    </b></td>
+                      <td> {{ employee.department}}<br></td>
+                    </tr>
+                    <tr>
+                      <td><b>Desigination    </b> </td>
+                      <td>{{ employee.desigination }}<br></td>
+                    </tr>
+            </tbody>
+            </table>
+</div>
+</html>
+
+
+{% endblock %}

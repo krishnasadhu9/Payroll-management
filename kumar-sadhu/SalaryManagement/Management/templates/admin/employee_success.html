@@ -1,0 +1,14 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+
+{% if success == True %}
+    <p style="color: #0094ff"> successfully imported</p>
+{% endif %}
+{% if success != True %}
+    <p style="color: #ff0000"> Import Failure </p>
+    <p style="color: #ff0000">Error Message :  {{message}} </p>
+    <p style="color: #ff0000"> Type of Error : {{type}} </p>
+{% endif %}
+
+{% endblock %}

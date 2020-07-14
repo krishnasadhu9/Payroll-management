@@ -1,0 +1,37 @@
+{% extends 'Management/base.html' %}
+
+{% load static %}
+{% block content %}
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="static/responsiveslides.css">
+    <link rel="stylesheet" href="static/demo/themes/demo.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="static/responsiveslides.min.js"></script>
+    <script>
+
+      $(function () {
+        $("#slider1").responsiveSlides({
+          maxwidth:1500,
+          speed: 400
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <ul class="rslides" id="slider1">
+        <li><img src="static/2.jpg" alt=""></li>
+        <li><img src="static/10.jpg" alt=""></li>
+        <li><img src="static/9.jpg" alt=""></li>
+      </ul>
+
+
+    </div>
+</body>
+{% endblock %}

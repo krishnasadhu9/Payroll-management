@@ -1,0 +1,38 @@
+{% extends 'Management/base.html' %}
+
+
+{% block content %}
+
+
+<html>
+<div id="main-content">
+<div class="container">
+<div class="row main-row fullwidth">
+<div id="page-673" class="post-673 page type-page status-publish hentry">
+<div class="hb-main-content col-12">
+
+<div class="wpb_text_column wpb_content_element " >
+<div class="wpb_wrapper">
+<p style="text-align: center;">We&#8217;re excited to talk to you! Fill out the form below and we&#8217;ll be in touch.</p>
+</div>
+</div>
+<div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+<form  method="POST">{% csrf_token %}
+<span id='input_1_1_3_container' class='name_first' >
+<label for='input_1_1_3' >Full Name</label>
+<input type='text' name='input_1.3' id='input_1_1_3' value='' aria-label='First name'   aria-required="true" aria-invalid="false" />
+</span>
+</div><label class='gfield_label' for='input_1_2' >Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
+<input name='input_2' id='input_1_2' type='text' value='' class='large'    aria-required="true" aria-invalid="false" />
+</div><br><label class='gfield_label' for='input_1_9' >Phone<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_phone'><input name='input_9' id='input_1_9' type='text' value='' class='medium'   aria-required="true" aria-invalid="false"  /></div></li><br><label class='gfield_label' for='input_1_11' >Message</label><div class='ginput_container ginput_container_textarea'><textarea name='input_11' id='input_1_11' class='textarea small'      aria-invalid="false"   rows='10' cols='50'></textarea></div><div id='input_1_6' class='ginput_container ginput_recaptcha' data-sitekey='6LducF0UAAAAAFnMA7R49zyOhFWKCWV7N0uwTT0Z'  data-theme='light' data-tabindex='0'  data-badge=''></div></li>
+</div><br>
+<input type="submit" value="Submit"><br>
+</form>
+
+<h5 style="color: #ff0000">{{sub}}</h5>
+
+</html>
+
+
+
+{% endblock %}

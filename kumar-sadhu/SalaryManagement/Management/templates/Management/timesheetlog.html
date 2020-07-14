@@ -1,0 +1,54 @@
+{% extends 'Management/base.html' %}
+
+
+{% block content %}
+<html lang="en">
+<body>
+  <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td, th {
+            border: 0.6px solid #dddddd;
+            text-align: left;
+            padding: 5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+    <table>
+      <tbody>
+
+        <tr>
+          <th> User Name </th>
+          <th> Date  </th>
+          <th> Status </th>
+         </tr>
+{% for record in Timesheetlog  %}
+
+        <tr>
+        <td>{{record.employee.username}}</td>
+        <td>{{record.date}}</td>
+        {% if record.status == 'unpaid' %}
+            <td style="color: #ff0000"> {{record.status}} </td>
+        {% endif %}
+        {% if record.status != 'unpaid' %}
+            <td style="color: #0094ff"> {{record.status}} </td>
+        {% endif %}
+        </tr>
+
+{%endfor%}
+
+</tbody>
+</table>
+</body>
+</html>
+
+
+{% endblock %}

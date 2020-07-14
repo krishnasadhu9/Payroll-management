@@ -1,0 +1,328 @@
+/* Global */
+body {
+  background-color: #f3f6f8;
+}
+label {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+th, td {
+  padding: 15px;
+}
+th:first-child,
+td:first-child,
+th:last-child,
+td:last-child {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+tr:hover {
+  background-color: #fcfcfc;
+}
+
+/* Nav styles */
+.nav {
+  background-color: #fff;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 10px;
+}
+.nav__list {
+  list-style: none;
+}
+.nav__item {
+  float: left;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.nav__item--login {
+  float: right;
+}
+.nav__link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Footer styles */
+.footer:before {
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+.footer img {
+  max-width: 70px;
+}
+.footer {
+  background-color: white;
+  padding-bottom: 60px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer li:first-child {
+  font-weight: 600;
+}
+.footer__wave {
+  max-width: 100%;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: -2px;
+}
+
+/* Logo styles */
+.logo {
+  max-width: 300px;
+  padding: 10px 0;
+}
+
+/* Page styles */
+
+.page__title {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 10px;
+  text-transform: uppercase;
+  -ms-transform: skewY(-8deg);
+  -webkit-transform: skewY(-8deg);
+  transform: skewY(-8deg);
+}
+.page__title--error {
+  font-size: 60px;
+}
+.page__subtitle {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* Form styles */
+.form {
+
+}
+.form__input {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form__submit {
+  margin-bottom: 40px;
+}
+
+/* Car tile styles */
+.car-tile__container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  display: flex;
+  flex-wrap: wrap;
+}
+.car-tile {
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  border: 1px solid #eee;
+  padding: 20px;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  margin-bottom: 4%;
+  text-decoration: none;
+}
+@media only screen and (min-width: 700px) {
+  .car-tile {
+    width: 38.5%;
+    margin-right: 4%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .car-tile {
+    width: 27%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+
+  .car-tile:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+.car-tile__caption {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.car-tile__name {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.car-tile__tasks {
+  color: #00ce8c;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.car-tile__color {
+  color: black;
+  font-size: 20px;
+}
+
+/* Car sidebar styles */
+.car-sidebar {
+  background-color: #fff;
+  border: 1px solid #eee;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  margin-top: 20px;
+}
+
+.car-sidebar__background {
+  background-color: #cd4848;
+  height: 100px;
+  text-align: center;
+}
+
+.car-sidebar__icon {
+  background-color: #fff;
+  border-radius: 100%;
+  position: relative;
+  top: 50px;
+  border: 2px solid #eee;
+}
+.car-sidebar__copy {
+  padding: 20px;
+  padding-top: 70px;
+}
+.car-sidebar__info {
+  margin-bottom: 20px;
+}
+.car-sidebar__info--task {
+  color: #00ce8c;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.car-sidebar__label {
+  margin-bottom: 0;
+}
+.car-sidebar__link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eee;
+  -webkit-box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 20px -15px rgba(0,0,0,0.5);
+}
+.table__controls {
+  cursor: pointer;
+  font-size: 12px;
+}
+.table__controls a {
+  text-decoration: none;
+}
+
+/* Modal styles */
+.modal {
+  background-color: white;
+  display: block;
+  margin: 10px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  height: 500px;
+
+  z-index: 1010;
+}
+@media only screen and (min-width: 620px) {
+  .modal {
+    width: 600px;
+  }
+}
+.modal__content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.modal__overlay {
+  background-color: #000000b3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1000;
+}
+.modal__close {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+}
+.closed {
+  display: none;
+}
+.modal .form__input {
+  width: 80%;
+}
+
+/* Task modal styles*/
+.task-modal__title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.task-modal__text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.task__button {
+  float: right;
+  margin-top: 20px;
+}
+.task {
+  cursor: pointer;
+}
+
+/* Error styles */
+.error {
+  text-align: center;
+}
+.error__message {
+  font-size: 20px;
+}
+
+.back-button {
+  display: block;
+  text-decoration: none;
+}

@@ -1,0 +1,180 @@
+{% extends 'Management/base.html' %}
+{% block content %}
+
+<html lang="en">
+<body>
+  <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td, th {
+            border: 0.6px solid #dddddd;
+            text-align: left;
+            padding: 5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+
+
+
+<p>
+  <meta charset="utf-8">
+  <table>
+
+            <tbody>
+            
+              <tr><br>
+                      <h3 style="font-size: large" ><b>SALARY STRUCTURE</b> for the Month : <b>{{ salitem.salaryMonth }}</b> and Year : <b>{{ salitem.salaryyear }}</b> for Employee : <b> {{ employee.firstName }} </b>
+              </h3></tr>
+                <tr>
+                    <td><b>First Name </b> </td>
+                    <td>{{ employee.firstName }}<br></td>
+                </tr>
+                <tr>
+                    <td><b>Last  Name :</b></td>
+                    <td> {{ employee.lastName }}<br></td>
+                  </tr>
+                  <tr>
+                    <td><b>Date of Birth :</b></td>
+                    <td> {{ employee.dob }}<br></td>
+                  </tr>
+                  <tr>
+                    <td><b>Contact number :</b></td>
+                    <td> {{ employee.contact}}<br></td>
+                  </tr>
+                  <tr>
+                    <td><b>Address :</b> </td>
+                    <td>{{ employee.address}}<br></td>
+                  </tr>
+                  <tr>
+                    <td><b>Email :</b></td>
+                    <td> {{ employee.email }}<br></td>
+                  </tr>
+                  <tr>
+                    <td><b>CTC salary  :</b></td>
+                    <td> ${{ employee.CTC }} USD <br></td>
+                  </tr>
+                  <tr>
+                    <td><b>Department  :</b></td>
+                    <td> {{ employee.department}}<br></td>
+                  </tr>
+                  <tr>
+                    <td><b>Desigination  :</b> </td>
+                    <td>{{ employee.desigination }}<br></td>
+                  </tr>
+              </p>
+                      <br><br>
+                      <tr>
+                          <td>
+                            <p>        </p>
+                    </td>
+                   </tr>
+                      <tr>
+                          <td><b><u>SALARY STATEMENT :</u></b><br></td>
+                         </tr>
+                    <tr>
+                        <td>  <br><b>CTC per year :</b> </td>
+                       <td>$  {{ salitem.CTC }} </td>
+                      </tr>
+
+                      <tr>
+                          <td><br><b>CTC per month :</b> </td>
+                      <td>$  {{ salitem.Monthly_salary }} </td>
+                     </tr>
+
+                     <tr>
+                         <td>
+                           <p>        </p>
+                   </td>
+                  </tr>
+
+                     <tr>
+
+                      <td><br><br>
+                      <b><u>EARNINGS :</u></b><br></td>
+                      </tr>
+
+                      <tr>
+                          <td>  <br><b>Basic :</b></td>
+                      <td> $  {{ salitem.basic_salary }}</td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                      <br><b>Dearness Allowance(DA) :</b> </td>
+                      <td>$  {{ salitem.da_salary }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>House Rent Allowance(HRA) :</b></td>
+                      <td> $  {{ salitem.hra_salary }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Conveyance Allowance(CA) :</b> </td>
+                      <td>$  {{ salitem.ca_salary }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Other Allowance :</b> </td>
+                      <td>$  {{ salitem.other_allowances }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Total Earning :</b></td>
+                      <td>${{ salitem.total_earning }}</tr>
+                      <tr>
+                          <td>
+                      <br><br>
+                      <b><u>DEDUCTIONS :</u></b><br>
+                      <tr>
+                          <td>  <br><b>Provident Fund(PF) :</b></td>
+                      <td> $  {{ salitem.pf_salary }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Professional Tax(PT) :</b> </td>
+                      <td>$  {{ salitem.pt_salary }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Tax Deducted at Source(TDS) :</td>
+                      <td>$  {{ salitem.td_salary }}<br><br></tr>
+                      <tr>
+                        <tr>
+                            <td><br><b>Total Deductions :</b></td>
+                      <td> $  {{ salitem.total_deductions }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Total Take-away Salary :</b> </td>
+                <td>$  {{ salitem.total }}</tr>
+                  <tr>
+                      <td>
+                        <p>        </p>
+                </td>
+               </tr>
+                      <tr>
+                          <td>
+                      <br><br><b><u>LEAVE DETAILS :</u></b><br></td></tr>
+                      <tr><td><br><b>Number of working days :</td>
+                <td> {{ salitem.working_days }}</td></tr>
+                      <tr>
+                          <td>
+                      <br><b>Number of days leave :</b></td>
+                <td> {{ salitem.no_of_days_leave }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Amount to be deducted :</b> </td>
+                <td>$  {{ salitem.amount_to_deduct_for_leave }}</tr>
+                      <tr>
+                          <td>
+                      <br><b>Net Take-away Salary :</b> </td>
+                <td>$  {{ salitem.nettotal }}</tr>
+                      <tr>
+                          <td>
+              <br><br>
+            <tr> <th> <h1 style="color: #0094ff"> Total : $ {{ salitem.nettotal }} </h1></th></tr>
+
+
+{% endblock %}

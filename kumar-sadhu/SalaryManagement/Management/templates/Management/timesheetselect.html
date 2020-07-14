@@ -1,0 +1,60 @@
+{% extends 'Management/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<html>
+<body>
+
+    <br>
+
+<form action="/timesheetlog/{{user.username}}"  method="POST">{% csrf_token %}
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="{% static 'styles/skeleton.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+  <div class="w3-container">
+    <h4>Log information of {{ employee.username }}</h4>
+    <br>
+    <br>
+    <label for="month">Month:</label><br>
+    <input list="months" id="month" name="month" maxlength="100" required>
+        <datalist id="months">
+            {% if months %}
+                {% for month in months %}
+                    <option value="{{ month }}">
+                {% endfor %}
+            {% else %}
+                <option value="No records">
+            {% endif %}
+        </datalist>
+    <br>
+    <br>
+    <br>
+    <label for="year">Year:</label><br>
+    <input list="years" id="year" name="year" maxlength="100" required>
+        <datalist id="years">
+            {% if years %}
+                {% for year in years %}
+                    <option value="{{ year }}">
+                {% endfor %}
+            {% else %}
+                <option value="No records">
+            {% endif %}
+        </datalist>
+    <br><br>
+    <input type="submit" value="View">
+    <button type="submit" formaction="/csv/{{user.username}}">Download CSV</button> 
+    </div>
+</form>
+
+
+
+</body>
+</html>
+
+
+
+
+
+{% endblock %}

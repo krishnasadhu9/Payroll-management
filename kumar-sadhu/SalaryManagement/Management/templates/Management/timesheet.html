@@ -1,0 +1,52 @@
+{% extends 'Management/base.html' %}
+{% block content %}
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $date = $_POST['datepicker'];
+  } );
+
+
+  </script>
+</head>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{% static 'styles/skeleton.css' %}">
+<link rel="stylesheet" href="{% static 'styles/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+<body>
+
+<form method="POST" action=""> {% csrf_token %}
+
+<div class="w3-container">
+  <p>Select Date: <input type="text" id="datepicker" name="datepicker" value="Date"></p> <br>
+ <p>Select Working Type :</p>
+  <input class="radioBtn" type="radio" id="working" name="leave" value="working" >
+  <label for="working">Working</label><br>
+   <input class="radioBtn" type="radio" id="sick_leave" name="leave" value="sick_leave">
+  <label for="sick_leave">Sick Leave</label><br>
+   <input class="radioBtn" type="radio" id="Leave_of_absense" name="leave" value="Leave_of_absense" >
+  <label for="Leave_of_absense">Leave Of Absense</label><br>
+   <input class="radioBtn" type="radio" id="unpaid" name="leave" value="unpaid">
+  <label for="unpaid">Unpaid Leave</label><br>
+  <label for="Working_hours">Working Hours</label>
+  <input type="text" id="Working_hours" name="Working_hours" ><br><br>
+<input type="submit" value="Submit">
+</div>
+</form>
+<h3 style="color: #ff0000">{{sub}}</h3>
+
+</body>
+</html>
+{% endblock %}
