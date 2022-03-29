@@ -28,7 +28,7 @@ jsonschema==3.2.0
 numpy==1.17.4
 openpyxl==3.0.3
 pandas==0.25.3
-paramiko==2.7.1
+paramiko==2.10.1
 pathspec==0.5.9
 Pillow==7.1.1
 pycparser==2.20
